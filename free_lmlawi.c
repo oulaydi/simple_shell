@@ -10,10 +10,14 @@ void free_lmlawi(char **array)
 {
 	int i = 0;
 
-	while (array[i])
+	if (array == NULL)
 	{
-		free(array[i]);
-		i++;
+		while (array[i])
+		{
+			free(array[i]);
+			i++;
+		}
 	}
+	free(array[i]);
 	free(array);
 }

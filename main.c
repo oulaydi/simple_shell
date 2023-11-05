@@ -23,27 +23,24 @@ int main(void)
 		if (ronaldo == -1 || line == NULL)
 		{
 			free(line);
-			perror("READ_LINE :");
-			exit(EXIT_FAILURE);
+			exit(0);
 		}
 		tokenize = splitting_line(line);
 
 		if (tokenize[0] == NULL)
 		{
+			free(tokenize);
 			continue;
 		}
 
 		if (strcmp(tokenize[0], "exit") == 0)
 		{
-			free(tokenize);
 			break;
 		}
 
 		execution(tokenize);
-
-		free_lmlawi(tokenize);
 	}
-
 	free(line);
+	free(tokenize);
 	return (0);
 }

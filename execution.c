@@ -10,17 +10,19 @@ void execution(char **command)
 {
 	pid_t child_pid;
 	int stats;
+	char *command_path;
 
 	child_pid = fork();
 	if (child_pid == -1)
 	{
 		perror("FORK_ERR:");
-		exit(1);
+		exit(0);
 	}
 
 	if (child_pid == 0)
 	{
-		if (execve(command[0], command, NULL) == -1)
+		command_path = exec_path(command[0]);
+		if (execve(command_path, command, environ) == -1)
 		{
 			perror("ERR:");
 			exit(127);
@@ -34,4 +36,6 @@ void execution(char **command)
 			stats = WEXITSTATUS(stats);
 		}
 	}
+
+	free(command);
 }

@@ -8,33 +8,24 @@
 
 char **splitting_line(char *line)
 {
-	char *token, **array_returned, *doublet = NULL, *doub2 = NULL;
+	char *token, **array_returned;
 
 	int counter = 0;
 
-	doublet = strdup(line);
+	array_returned = malloc(sizeof(char *) * 1024);
 
-	token = strtok(doublet, " \n\t");
+	token = strtok(line, " \n\t");
+
 	while (token != NULL)
 	{
-		counter++;
-		token = strtok(NULL, " \n\t");
-	}
-	/*counter++;*/
-	free(doublet);
-	array_returned = malloc((sizeof(char *) * (counter + 1)));
-
-	doub2 = strdup(line);
-	token = strtok(doub2, " \n\t");
-	counter = 0;
-	while (token != NULL)
-	{
-		array_returned[counter] = strdup(token);
+		array_returned[counter] = token;
 		token = strtok(NULL, " \n\t");
 		counter++;
 	}
 	array_returned[counter] = NULL;
 
-	free(doub2);
 	return (array_returned);
+
 }
+
+
