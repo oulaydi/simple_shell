@@ -33,7 +33,7 @@ int main(void)
 			continue;
 		}
 
-		if (strcmp(tokenize[0], "exit") == 0)
+		if (_strcmp(tokenize[0], "exit") == 0)
 		{
 			break;
 		}

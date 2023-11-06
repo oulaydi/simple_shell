@@ -7,12 +7,12 @@ char *find_path(char *path)
 
 	while (environ[i] != NULL)
 	{
-		env_buff = strdup(environ[i]);
+		env_buff = _strdup(environ[i]);
 		token = strtok(env_buff, "=");
 
-		if (strcmp(token, path) == 0)
+		if (_strcmp(token, path) == 0)
 		{
-			switchh = strdup(strtok(NULL, "\n"));
+			switchh = _strdup(strtok(NULL, "\n"));
 			free(env_buff);
 			return (switchh);
 		}

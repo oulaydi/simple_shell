@@ -20,5 +20,10 @@ void execution(char **command);
 void free_lmlawi(char **array);
 char *exec_path(char *command);
 char *find_path(char *path);
+char *_strcat(char *dest, char *src);
+char *_strcpy(char *dest, char *src);
+int _strlen(char *s);
+int _strcmp(char *s1, char *s2);
+char *_strdup(char *src);
 
 #endif

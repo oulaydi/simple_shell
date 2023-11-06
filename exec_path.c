@@ -17,11 +17,11 @@ char *exec_path(char *command)
 
 	while (token != NULL)
 	{
-		buff = malloc(strlen(token) + 1 + strlen(command) + 1);
-		strcpy(buff, token);
+		buff = malloc(_strlen(token) + 1 + _strlen(command) + 1);
+		_strcpy(buff, token);
 		token = strtok(NULL, ":");
-		strcat(buff, "/");
-		strcat(buff, command);
+		_strcat(buff, "/");
+		_strcat(buff, command);
 
 		if (access(buff, R_OK) == 0)
 		{
