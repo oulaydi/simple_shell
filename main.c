@@ -11,6 +11,7 @@ int main(void)
 	int ronaldo = 0;
 	char **tokenize;
 	size_t size = 0;
+	int r_v;
 
 	while (1)
 	{
@@ -32,13 +33,29 @@ int main(void)
 			continue;
 		}
 
-		env_print(tokenize);
+		if (_strcmp(tokenize[0], "env") == 0)
+		{
+			env_print();
+			free(tokenize);
+			continue;
+		}
 
-		exit_status(tokenize);
+		if (_strcmp(tokenize[0], "exit") == 0)
+		{
+			r_v = exit_status(tokenize);
+			free(tokenize);
+			free(line);
+			exit(r_v);
+		}
 
 		execution(tokenize);
 	}
-	free(line);
-	free(tokenize);
+
+	if (line != NULL)
+		free(line);
+	if (tokenize != NULL)
+	{
+		free(tokenize);
+	}
 	return (0);
 }

@@ -26,11 +26,11 @@ int _strlen(char *s);
 int _strcmp(char *s1, char *s2);
 char *_strdup(char *src);
 void cmd_error_handle(char *cmd);
-void exit_status(char **arr);
+int exit_status(char **arr);
 int _isdigit(int c);
 void print_number(int n);
 void exit_neg_err(int num);
 int _putchar(char c);
-void env_print(char **array);
+void env_print();
 
 #endif

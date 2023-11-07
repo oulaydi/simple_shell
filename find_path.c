@@ -21,6 +21,6 @@ char *find_path(char *path)
 		i++;
 	}
 
-	return NULL;
+	return (NULL);
 
 }
