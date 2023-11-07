@@ -19,6 +19,7 @@
 /* Points to an array of pointers to strings called the "environment" */
 extern char **ptr_environ;
 
+<<<<<<< HEAD
 /**
  * struct data - struct that contains all relevant data on runtime
  * @av: argument vector
@@ -227,5 +228,25 @@ void help_cd(void);
 
 /* recuperate_help.c */
 int recuperate_help(all_data_shell *datash);
+=======
+char *read_line(void);
+char **splitting_line(char *line);
+void execution(char **command);
+void free_lmlawi(char **array);
+char *exec_path(char *command);
+char *find_path(char *path);
+char *_strcat(char *dest, char *src);
+char *_strcpy(char *dest, char *src);
+int _strlen(char *s);
+int _strcmp(char *s1, char *s2);
+char *_strdup(char *src);
+void cmd_error_handle(char *cmd);
+void exit_status(char **arr);
+int _isdigit(int c);
+void print_number(int n);
+void exit_neg_err(int num);
+int _putchar(char c);
+void env_print(char **array);
+>>>>>>> parent of 6e4010a (Handle The ENV cmd and fix some memory leaks)
 
 #endif
