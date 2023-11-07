@@ -12,7 +12,6 @@ int main(void)
 	char **tokenize;
 	size_t size = 0;
 
-
 	while (1)
 	{
 		if (isatty(0))
@@ -33,10 +32,9 @@ int main(void)
 			continue;
 		}
 
-		if (_strcmp(tokenize[0], "exit") == 0)
-		{
-			break;
-		}
+		env_print(tokenize);
+
+		exit_status(tokenize);
 
 		execution(tokenize);
 	}

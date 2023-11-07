@@ -22,10 +22,13 @@ void execution(char **command)
 	if (child_pid == 0)
 	{
 		command_path = exec_path(command[0]);
+		if (command_path == NULL)
+		{
+			cmd_error_handle(command[0]);
+		}
 		if (execve(command_path, command, environ) == -1)
 		{
-			perror("ERR:");
-			exit(127);
+			perror("RS: ");
 		}
 	}
 	else
