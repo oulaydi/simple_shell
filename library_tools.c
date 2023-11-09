@@ -158,6 +158,12 @@ void print_number(int n)
 	_putchar((num % 10) + '0');
 }
 
+/**
+ * _atoi - converts string to int
+ * @str: string to be converted
+ * Return: int value
+*/
+
 
 int custom_atoi(const char *str)
 {
