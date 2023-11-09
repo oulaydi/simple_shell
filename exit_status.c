@@ -34,6 +34,12 @@ int exit_status(char **arr)
 	return (0);
 }
 
+/**
+ * exit_neg_err - print to stderr the err message
+ * @num: return of exit_status
+ * Return: Void
+*/
+
 void exit_neg_err(int num)
 {
 	write(STDERR_FILENO, "./hsh: 1: exit: Illegal number: ", 32);
