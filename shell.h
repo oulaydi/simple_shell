@@ -33,5 +33,6 @@ void exit_neg_err(int num);
 int _putchar(char c);
 void env_print(void);
 int _atoi(const char *str);
+void call_env(char **arr, char *str);
 
 #endif
