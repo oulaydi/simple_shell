@@ -21,3 +21,13 @@ void free_lmlawi(char **array)
 	free(array[i]);
 	free(array);
 }
+
+void call_env(char **arr, char *str)
+{
+	if (_strcmp(arr[0], str) == 0)
+	{
+		env_print();
+		free(arr);
+		continue;
+	}
+}
