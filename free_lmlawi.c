@@ -22,12 +22,17 @@ void free_lmlawi(char **array)
 	free(array);
 }
 
+/**
+ * call_env - call the env_print function
+ * @arr: array
+ * @str: string (env)
+*/
+
 void call_env(char **arr, char *str)
 {
 	if (_strcmp(arr[0], str) == 0)
 	{
 		env_print();
 		free(arr);
-		continue;
 	}
 }
