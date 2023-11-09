@@ -1,5 +1,11 @@
 #include "shell.h"
 
+/**
+ * exit_status - Handle the exit built in
+ * @arr: full cmd
+ * Return: int value
+*/
+
 int exit_status(char **arr)
 {
 	if (_strcmp(arr[0], "exit") == 0)
