@@ -3,9 +3,9 @@
 
 /**
  * exec_path - return the command with achux
- *
+ * @command: the command to be executed
+ * Return: the command
 */
-
 
 char *exec_path(char *command)
 {
