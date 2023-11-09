@@ -19,7 +19,6 @@ int main(void)
 			write(STDOUT_FILENO, ">> ", 3);
 
 		ronaldo = getline(&line, &size, stdin);
-
 		if (ronaldo == -1 || line == NULL)
 		{
 			free(line);
@@ -32,14 +31,12 @@ int main(void)
 			free(tokenize);
 			continue;
 		}
-
 		if (_strcmp(tokenize[0], "env") == 0)
 		{
 			env_print();
 			free(tokenize);
 			continue;
 		}
-
 		if (_strcmp(tokenize[0], "exit") == 0)
 		{
 			r_v = exit_status(tokenize);
@@ -47,10 +44,8 @@ int main(void)
 			free(line);
 			exit(r_v);
 		}
-
 		execution(tokenize);
 	}
-
 	if (line != NULL)
 		free(line);
 	if (tokenize != NULL)
