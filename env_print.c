@@ -7,7 +7,7 @@
 /**
  * env_print - prints the environment variables
  */
-void env_print()
+void env_print(void)
 {
     char **env = environ;
 		while (*env != NULL)

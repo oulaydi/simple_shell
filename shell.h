@@ -31,6 +31,7 @@ int _isdigit(int c);
 void print_number(int n);
 void exit_neg_err(int num);
 int _putchar(char c);
-void env_print();
+void env_print(void);
+int _atoi(const char *str);
 
 #endif
