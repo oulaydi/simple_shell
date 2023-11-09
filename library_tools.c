@@ -92,7 +92,7 @@ int _strcmp(char *s1, char *s2)
 char *_strdup(char *src)
 {
 	size_t len = _strlen(src) + 1;
-	char *new_str =malloc(len * sizeof(char));
+	char *new_str = malloc(len * sizeof(char));
 
 	if (new_str == NULL)
 	{
