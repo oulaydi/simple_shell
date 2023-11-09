@@ -1,5 +1,10 @@
 #include "shell.h"
 
+/**
+ * cmd_error_handle - print to the stderr msg err
+ * @cmd: command fail
+ * Return: Void
+*/
 
 void cmd_error_handle(char *cmd)
 {
