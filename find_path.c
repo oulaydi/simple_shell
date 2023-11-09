@@ -1,5 +1,11 @@
 #include "shell.h"
 
+/**
+ * find_path - find an env var according to path var
+ * @path: the env var
+ * Return: The Var On Success, NULL on Failure
+*/
+
 char *find_path(char *path)
 {
 	int i = 0;
