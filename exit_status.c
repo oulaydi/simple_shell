@@ -7,7 +7,8 @@ int exit_status(char **arr)
 		if (arr[1] != NULL)
 		{
 			int int_value;
-			int_value = atoi(arr[1]);
+
+			int_value = _atoi(arr[1]);
 
 			if (int_value >= 0)
 			{
@@ -23,7 +24,7 @@ int exit_status(char **arr)
 		}
 
 	}
-	
+
 	return (0);
 }
 
