@@ -28,7 +28,7 @@ void execution(char **command)
 		}
 		if (execve(command_path, command, environ) == -1)
 		{
-			perror("RS: ");
+			cmd_error_handle(command[0]);
 		}
 	}
 	else
