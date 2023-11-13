@@ -27,5 +27,3 @@ char **splitting_line(char *line)
 	return (array_returned);
 
 }
-
-
