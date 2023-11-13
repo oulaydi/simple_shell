@@ -46,11 +46,5 @@ int main(void)
 		}
 		execution(tokenize);
 	}
-	if (line != NULL)
-		free(line);
-	if (tokenize != NULL)
-	{
-		free(tokenize);
-	}
 	return (0);
 }
